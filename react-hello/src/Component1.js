@@ -3,17 +3,17 @@ import React from 'react';
 import {Lista} from './Lista'
 
 export class Component1 extends React.Component {
-    initialState = {
+    estadoInicial = {
         nome: '',
         idade: '',
         nascimento: '',
         categorias: ['Informatica', 'Redes', 'Adm']
     }
 
-    state = this.initialState;
+    state = this.estadoInicial;
 
     limpar() {
-        this.setState(this.initialState)
+        this.setState(this.estadoInicial)
     }
 
     componentDidMount() {

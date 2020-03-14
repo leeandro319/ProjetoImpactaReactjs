@@ -3,6 +3,7 @@ const port = 3200;
 
 const bodyParser = require('body-parser');
 const express = require('express');
+const allowCors = require('./cors');
 
 const server = express(); 
 
@@ -12,6 +13,8 @@ server.use(bodyParser.urlencoded({ extended: true }))
 
 //considera o formato json no corpo da requisição
 server.use(bodyParser.json()); 
+
+server.use(allowCors);
 
 server.get('/', function (req, res) {
     res.send('Hello World!');
